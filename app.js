@@ -64,13 +64,37 @@ window.onload = () => {
 
     //Link Input
 
-    let instaLink = document.getElementById("insta").addEventListener("input", myFunction);
-    function myFunction() {
-      document.getElementById("instagramIcon").innerHTML = instaLink.createObjectURL;
+    let igBTN = document.getElementById("instagramIcon");
+    let igInput = document.getElementById("insta");
+
+    igBTN.addEventListener('click', () => {
+      window.open(igInput.value)
+    })
+
+    let threadBTN = document.getElementById("threadsIcon");
+    let threadsInput = document.getElementById("threads");
+
+    threadBTN.addEventListener('click', () => {
+      window.open(threadsInput.value)
+    })
+
+    let linkedBTN = document.getElementById("linkedIcon");
+    let linkedInput = document.getElementById("linkedIn");
+
+    linkedBTN.addEventListener('click', () => {
+      window.open(linkedInput.value)
+    })
+
+    let gitBTN = document.getElementById("githubIcon");
+    let gitInput = document.getElementById("github");
+
+    gitBTN.addEventListener('click', () => {
+      window.open(gitInput.value)
+    })
 
 
 
-
+    
 
     // function instaLink(input, textElement, mediaLink = false) {
     //   if (mediaLink) {
