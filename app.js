@@ -62,6 +62,7 @@ window.onload = () => {
       );
 
 
+
 //link input file to image
         const profileImg = document.getElementById("photo1"),
         input = document.getElementById("uploadFile");
@@ -71,33 +72,6 @@ window.onload = () => {
 
         })
 
-//shareIcons Link
-// function igIcon(input, textElement, mediaLink = false) {
-//   if (mediaLink) {
-//     input.addEventListener("input", () => {
-//       textElement.href = input.value;
-//       return;
-//     });
-//   }
-//   input.addEventListener("input", () => {
-//     textElement.innerText = input.value;
-//   });
-// }
-// igIcon(
-//   document.getElementById("insta"),
-//   document.getElementById("instagramIcon")
-// );
-
-//background
-
-
-    
 }
 
-
-//   let first = document.getElementById("firstName");
-
-//   first.addEventListener("input", () => {
-//     document.getElementById("nameHere").innerText = first.value;
-//   });
 
