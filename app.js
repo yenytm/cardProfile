@@ -1,7 +1,7 @@
 window.onload = () => {
 
   //RoleInput
-  function roleName(input, textElement, mediaLink = false) {
+  function enterInput(input, textElement, mediaLink = false) {
     if (mediaLink) {
       input.addEventListener("input", () => {
         textElement.href = input.value;
@@ -12,55 +12,26 @@ window.onload = () => {
       textElement.innerText = input.value;
     });
   }
-  roleName(
+  enterInput(
     document.getElementById("role"),
     document.getElementById("roleName")
   );
-
-  //CityInput
-  function cityName(input, textElement) {
-    input.addEventListener("input", () => {
-      textElement.innerText = input.value + ",";
-    });
-  }
-  cityName(
+  enterInput(
     document.getElementById("city"),
     document.getElementById("cityName")
   );
-
-  //CountryInput
-  function stateName(input, textElement) {
-    input.addEventListener("input", () => {
-      textElement.innerText = input.value;
-    });
-  }
-  stateName(
+  enterInput(
     document.getElementById("state"),
     document.getElementById("stateName")
   );
-
-  //Name Input
-  function firstName(input, textElement) {
-    input.addEventListener("input", () => {
-      textElement.innerText = input.value + " ";
-    });
-  }
-  firstName(
+  enterInput(
     document.getElementById("firstName"),
     document.getElementById("firstNameHere")
   );
-
-    //Last Nane Input
-    function lastName(input, textElement) {
-        input.addEventListener("input", () => {
-          textElement.innerText = input.value;
-        });
-      }
-      lastName(
-        document.getElementById("lastName"),
-        document.getElementById("lastNameHere")
-      );
-
+  enterInput(
+    document.getElementById("lastName"),
+    document.getElementById("lastNameHere")
+  );
 
     //Link Input
 
@@ -94,29 +65,6 @@ window.onload = () => {
 
 
 
-    
-
-    // function instaLink(input, textElement, mediaLink = false) {
-    //   if (mediaLink) {
-    //     input.addEventListener("input", () => {
-    //       textElement.src = input.value;
-    //       return;
-    //     });
-    //   }
-    //   input.addEventListener("input", () => {
-    //     textElement.src = input.value;
-    //   });
-    // }
-    // instaLink(
-    //   document.getElementById("threads"),
-    //   document.getElementById("instagramIcon")
-    // );
-
-
-
-
-
-
 //link input file to image
         const profileImg = document.getElementById("photo1"),
         input = document.getElementById("uploadFile");
@@ -127,6 +75,9 @@ window.onload = () => {
         })
 
 
+
+
+        
 }
 
 
