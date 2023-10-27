@@ -50,7 +50,7 @@ window.onload = () => {
     document.getElementById("firstNameHere")
   );
 
-    //Last Input
+    //Last Nane Input
     function lastName(input, textElement) {
         input.addEventListener("input", () => {
           textElement.innerText = input.value;
@@ -62,24 +62,31 @@ window.onload = () => {
       );
 
 
-
-
     //Link Input
-    function instaLink(input, textElement, mediaLink = false) {
-      if (mediaLink) {
-        input.addEventListener("input", () => {
-          textElement.href = input.value;
-          return;
-        });
-      }
-      input.addEventListener("input", () => {
-        textElement.innerText = input.value;
-      });
-    }
-    instaLink(
-      document.getElementById("threads"),
-      document.getElementById("instagramIcon")
-    );
+
+    let instaLink = document.getElementById("insta").addEventListener("input", myFunction);
+    function myFunction() {
+      document.getElementById("instagramIcon").innerHTML = instaLink.createObjectURL;
+
+
+
+
+
+    // function instaLink(input, textElement, mediaLink = false) {
+    //   if (mediaLink) {
+    //     input.addEventListener("input", () => {
+    //       textElement.src = input.value;
+    //       return;
+    //     });
+    //   }
+    //   input.addEventListener("input", () => {
+    //     textElement.src = input.value;
+    //   });
+    // }
+    // instaLink(
+    //   document.getElementById("threads"),
+    //   document.getElementById("instagramIcon")
+    // );
 
 
 
