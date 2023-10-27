@@ -63,6 +63,29 @@ window.onload = () => {
 
 
 
+
+    //Link Input
+    function instaLink(input, textElement, mediaLink = false) {
+      if (mediaLink) {
+        input.addEventListener("input", () => {
+          textElement.href = input.value;
+          return;
+        });
+      }
+      input.addEventListener("input", () => {
+        textElement.innerText = input.value;
+      });
+    }
+    instaLink(
+      document.getElementById("threads"),
+      document.getElementById("instagramIcon")
+    );
+
+
+
+
+
+
 //link input file to image
         const profileImg = document.getElementById("photo1"),
         input = document.getElementById("uploadFile");
@@ -71,6 +94,7 @@ window.onload = () => {
             profileImg.src = URL.createObjectURL(input.files[0]);
 
         })
+
 
 }
 
