@@ -69,4 +69,19 @@ window.onload = () => {
   input.addEventListener("change", () => {
     profileImg.src = URL.createObjectURL(input.files[0]);
   });
+
+
+  //background cover change
+let coverChange  = document.getElementById("coverChange");
+let bodyDiv = document.getElementById("bodyDiv");
+
+coverChange.addEventListener("change",() => {
+if(coverChange.value === "Yes"){
+  bodyDiv.style.backgroundImage = "url(https://images.pexels.com/photos/1175136/pexels-photo-1175136.jpeg?auto=compress&cs=tinysrgb&w=600)"
+}
+})
+
+
+
+
 };
