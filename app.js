@@ -1,5 +1,5 @@
 window.onload = () => {
-  //RoleInput
+  //Input Value Function
   function enterInput(input, textElement, mediaLink = false) {
     if (mediaLink) {
       input.addEventListener("input", () => {
@@ -41,8 +41,8 @@ window.onload = () => {
     window.open(igInput.value);
   });
 
-  let threadBTN = document.getElementById("threadsIcon");
-  let threadsInput = document.getElementById("threads");
+  let threadBTN = document.getElementById("xIcon");
+  let threadsInput = document.getElementById("xTwitter");
 
   threadBTN.addEventListener("click", () => {
     window.open(threadsInput.value);
@@ -70,19 +70,34 @@ window.onload = () => {
     profileImg.src = URL.createObjectURL(input.files[0]);
   });
 
-
   //background cover change
-let coverChange  = document.getElementById("coverChange");
-let bodyDiv = document.getElementById("bodyDiv");
+  let coverChange = document.getElementById("coverChange");
+  let bodyDiv = document.getElementById("bodyDiv");
 
-coverChange.addEventListener("change",() => {
-if(coverChange.value === "Yes"){
-  bodyDiv.style.backgroundImage = "url(https://images.pexels.com/photos/1175136/pexels-photo-1175136.jpeg?auto=compress&cs=tinysrgb&w=600)"
-  bodyDiv.style.backgroundSize = "cover"
-}
-})
+  coverChange.addEventListener("change", () => {
+    if (coverChange.value === "Yes") {
+      bodyDiv.style.backgroundImage =
+        "url(https://images.pexels.com/photos/1175136/pexels-photo-1175136.jpeg?auto=compress&cs=tinysrgb&w=600)";
+      bodyDiv.style.backgroundSize = "cover";
+      bodyDiv.style.color = "white";
+    } else {
+      bodyDiv.style = bodyDiv.value;
+    }
+  });
 
+  //Social Media Icon Position
+  let smPosition = document.getElementById("position");
+  let shareIcons = document.getElementById("shareIcons");
 
-
-
+  smPosition.addEventListener("change", () => {
+    if (smPosition.value === "Right") {
+      shareIcons.style.flexDirection = "column";
+      shareIcons.style.transform = "translate(160px, -255px)";
+    } else if (smPosition.value === "Left") {
+      shareIcons.style.flexDirection = "column";
+      shareIcons.style.transform = "translate(-90px, -255px)";
+    } else {
+      shareIcons.style = shareIcons.value;
+    }
+  });
 };
