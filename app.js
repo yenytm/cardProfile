@@ -78,6 +78,7 @@ let bodyDiv = document.getElementById("bodyDiv");
 coverChange.addEventListener("change",() => {
 if(coverChange.value === "Yes"){
   bodyDiv.style.backgroundImage = "url(https://images.pexels.com/photos/1175136/pexels-photo-1175136.jpeg?auto=compress&cs=tinysrgb&w=600)"
+  bodyDiv.style.backgroundSize = "cover"
 }
 })
 
