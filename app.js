@@ -1,5 +1,4 @@
 window.onload = () => {
-
   //RoleInput
   function enterInput(input, textElement, mediaLink = false) {
     if (mediaLink) {
@@ -33,51 +32,41 @@ window.onload = () => {
     document.getElementById("lastNameHere")
   );
 
-    //Link Input
+  //Link Input
 
-    let igBTN = document.getElementById("instagramIcon");
-    let igInput = document.getElementById("insta");
+  let igBTN = document.getElementById("instagramIcon");
+  let igInput = document.getElementById("insta");
 
-    igBTN.addEventListener('click', () => {
-      window.open(igInput.value)
-    })
+  igBTN.addEventListener("click", () => {
+    window.open(igInput.value);
+  });
 
-    let threadBTN = document.getElementById("threadsIcon");
-    let threadsInput = document.getElementById("threads");
+  let threadBTN = document.getElementById("threadsIcon");
+  let threadsInput = document.getElementById("threads");
 
-    threadBTN.addEventListener('click', () => {
-      window.open(threadsInput.value)
-    })
+  threadBTN.addEventListener("click", () => {
+    window.open(threadsInput.value);
+  });
 
-    let linkedBTN = document.getElementById("linkedIcon");
-    let linkedInput = document.getElementById("linkedIn");
+  let linkedBTN = document.getElementById("linkedIcon");
+  let linkedInput = document.getElementById("linkedIn");
 
-    linkedBTN.addEventListener('click', () => {
-      window.open(linkedInput.value)
-    })
+  linkedBTN.addEventListener("click", () => {
+    window.open(linkedInput.value);
+  });
 
-    let gitBTN = document.getElementById("githubIcon");
-    let gitInput = document.getElementById("github");
+  let gitBTN = document.getElementById("githubIcon");
+  let gitInput = document.getElementById("github");
 
-    gitBTN.addEventListener('click', () => {
-      window.open(gitInput.value)
-    })
+  gitBTN.addEventListener("click", () => {
+    window.open(gitInput.value);
+  });
 
+  //link input file to image
+  const profileImg = document.getElementById("photo1"),
+    input = document.getElementById("uploadFile");
 
-
-//link input file to image
-        const profileImg = document.getElementById("photo1"),
-        input = document.getElementById("uploadFile");
-
-        input.addEventListener("change", () => {
-            profileImg.src = URL.createObjectURL(input.files[0]);
-
-        })
-
-
-
-
-        
-}
-
-
+  input.addEventListener("change", () => {
+    profileImg.src = URL.createObjectURL(input.files[0]);
+  });
+};
