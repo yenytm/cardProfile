@@ -52,6 +52,7 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  background-color: gray;
   object-fit: cover;
   overflow: hidden;
   box-shadow: inset 0 0 50px #fbf9f9, inset 20px 0 80px rgb(247, 248, 249),

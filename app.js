@@ -73,6 +73,7 @@ window.onload = () => {
   //background cover change
   let coverChange = document.getElementById("coverChange");
   let bodyDiv = document.getElementById("bodyDiv");
+  let card = document.getElementById("cardProfile")
 
   coverChange.addEventListener("change", () => {
     if (coverChange.value === "Yes") {
@@ -80,6 +81,7 @@ window.onload = () => {
         "url(https://images.pexels.com/photos/1175136/pexels-photo-1175136.jpeg?auto=compress&cs=tinysrgb&w=600)";
       bodyDiv.style.backgroundSize = "cover";
       bodyDiv.style.color = "white";
+      
     } else {
       bodyDiv.style = bodyDiv.value;
     }
