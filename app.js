@@ -1,15 +1,15 @@
 window.onload = () => {
   //Input Value Function
-  function enterInput(input, textElement, mediaLink = false) {
+  function enterInput(input, textElement, mediaLink = false, link) {
     if (mediaLink) {
       input.addEventListener("input", () => {
-        textElement.href = input.value;
-        return;
+        textElement.href = "https://www." + link + input.value;
+      });
+    } else {
+      input.addEventListener("input", () => {
+        textElement.innerText = input.value;
       });
     }
-    input.addEventListener("input", () => {
-      textElement.innerText = input.value;
-    });
   }
   enterInput(
     document.getElementById("role"),
@@ -31,36 +31,24 @@ window.onload = () => {
     document.getElementById("lastName"),
     document.getElementById("lastNameHere")
   );
-
-  //Link Input
-
-  let igBTN = document.getElementById("instagramIcon");
-  let igInput = document.getElementById("insta");
-
-  igBTN.addEventListener("click", () => {
-    window.open(igInput.value);
-  });
-
-  let threadBTN = document.getElementById("xIcon");
-  let threadsInput = document.getElementById("xTwitter");
-
-  threadBTN.addEventListener("click", () => {
-    window.open(threadsInput.value);
-  });
-
-  let linkedBTN = document.getElementById("linkedIcon");
-  let linkedInput = document.getElementById("linkedIn");
-
-  linkedBTN.addEventListener("click", () => {
-    window.open(linkedInput.value);
-  });
-
-  let gitBTN = document.getElementById("githubIcon");
-  let gitInput = document.getElementById("github");
-
-  gitBTN.addEventListener("click", () => {
-    window.open(gitInput.value);
-  });
+  enterInput(
+    document.getElementById("insta"),
+    document.getElementById("instagramIcon"),
+    true,
+    'instagram.com/'
+  );
+  enterInput(
+    document.getElementById("xTwitter"),
+    document.getElementById("xIcon"), true, 'x.com/'
+  );
+  enterInput(
+    document.getElementById("linkedIn"),
+    document.getElementById("linkedIcon"), true, 'linkedin.com/'
+  );
+  enterInput(
+    document.getElementById("github"),
+    document.getElementById("githubIcon"), true, 'github.com/'
+  );
 
   //link input file to image
   const profileImg = document.getElementById("photo1"),
@@ -73,7 +61,7 @@ window.onload = () => {
   //background cover change
   let coverChange = document.getElementById("coverChange");
   let bodyDiv = document.getElementById("bodyDiv");
-  let card = document.getElementById("cardProfile")
+  let card = document.getElementById("cardProfile");
 
   coverChange.addEventListener("change", () => {
     if (coverChange.value === "Yes") {
@@ -81,7 +69,6 @@ window.onload = () => {
         "url(https://images.pexels.com/photos/1175136/pexels-photo-1175136.jpeg?auto=compress&cs=tinysrgb&w=600)";
       bodyDiv.style.backgroundSize = "cover";
       bodyDiv.style.color = "white";
-      
     } else {
       bodyDiv.style = bodyDiv.value;
     }

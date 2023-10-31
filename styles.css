@@ -70,20 +70,10 @@ body {
   margin-top: 40px;
   text-align: center;
 }
-button {
-  background: rgb(3, 3, 3);
-  margin: 5px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#shareIcons {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-  fill: rgb(250, 250, 250);
-  text-align: center;
+
+a {
+  color: white;
+  
 }
 
 #socialMedia {
