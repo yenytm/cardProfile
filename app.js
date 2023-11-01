@@ -79,7 +79,7 @@ window.onload = () => {
   let shareIcons = document.getElementById("shareIcons");
 
   smPosition.addEventListener("change", () => {
-    if (smPosition.value === "Left") {
+    if (smPosition.value === "Right") {
       shareIcons.style.transform =  "translate(310px, -190px)"
     } else {
       shareIcons.style = shareIcons.value;
