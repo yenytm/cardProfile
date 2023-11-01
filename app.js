@@ -76,7 +76,7 @@ window.onload = () => {
 
   //Social Media Icon Position
   let smPosition = document.getElementById("position");
-  let shareIcons = document.getElementById("shareIcons");
+  let shareIcons = document.querySelector("shareIcons");
 
   smPosition.addEventListener("change", () => {
     if (smPosition.value === "Right") {

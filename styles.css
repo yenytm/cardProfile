@@ -76,14 +76,16 @@ a {
   
 }
 
-#socialMedia {
-  display: flex;
-  justify-content: space-between;
-}
+
 #smPosition {
   display: flex;
   margin: 2px;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+.fa-brands {
+  font-size: 18px;
+  padding: 2px;
+  display: flex;
 }
