@@ -76,15 +76,11 @@ window.onload = () => {
 
   //Social Media Icon Position
   let smPosition = document.getElementById("position");
-  let shareIcons = document.querySelector("shareIcons");
+  let shareIcons = document.getElementById("shareIcons");
 
   smPosition.addEventListener("change", () => {
-    if (smPosition.value === "Right") {
-      shareIcons.style.flexDirection = "column";
-      shareIcons.style.transform = "translate(160px, -255px)";
-    } else if (smPosition.value === "Left") {
-      shareIcons.style.flexDirection = "column";
-      shareIcons.style.transform = "translate(-90px, -255px)";
+    if (smPosition.value === "Left") {
+      shareIcons.style.transform =  "translate(310px, -190px)"
     } else {
       shareIcons.style = shareIcons.value;
     }
